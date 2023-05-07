@@ -37,9 +37,9 @@ public class StarField : MonoBehaviour {
     }
 
     CreateConstellation(0);
-    // CreateConstellation(1);
+    CreateConstellation(1);
     CreateConstellation(2);
-    // CreateConstellation(3);
+    CreateConstellation(3);
 
   }
 
@@ -113,10 +113,11 @@ public class StarField : MonoBehaviour {
   void Update() {
     // Check for numeric input and toggle the constellation highlights
     for (int i = 0; i < 10; i++) {
-        // if (Input.GetKeyDown(KeyCode.Alpha0 + i)) {
-          // Debug.Log(i);
+        if (Input.GetKeyDown(KeyCode.Alpha0 + i)) {
+          Debug.Log(i);
             ToggleConstellation(i);
-        // }
+        }else {
+          return;
     }
   }
 
